@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans.woff2") format("woff2"),
+         url("../fonts/PTSans.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSansBold.woff2") format("woff2"),
+         url("../fonts/PTSansBold.woff") format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../fonts/RubikMedium.woff2") format("woff2"),
+         url("../fonts/RubikMedium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+    background-image: url(../img/background_fish.jpg);
+    background-repeat: no-repeat;
+}
+
+header .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header img {
+    margin-top: 14px;
+}
+
+.main-nav ul {
+    padding-left: 0px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav li {
+    list-style-type: none;
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.main-nav li a, .bin-empty {
+    text-decoration: none;
+    color: white;
+}
+
+.bin-empty {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 222px;
+    margin-bottom: 20px;
+    background: url(../img/bin_empty.svg) no-repeat left top;
+    background-size: 20px;
+    padding-left: 28px;
+    padding-top: 4px;
+}
+
+a.call {
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: white;
+    padding-left: 110px;
+}
+
+.main-nav ul li:first-child {
+    padding-left: 7px;
+}
+
+.main-nav ul li:nth-child(2) {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+/*Данный отступ с правого края почему-то не работает, хм. С левого края все ОК*/
+.main-nav ul li:nth-child(3) {
+    padding-right: 7px;
+}
+
+.main-nav {
+    margin-left: 127px;
+    border-bottom: 2px solid #f7a000;
+    width: 370px;
+}
+
+section.promo {
+    background-image: url(../img/background_fish.jpg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: -93px;
+    height: 490px;
+}
+
+.catalog-nav li {
+    display: inline-block;
+}
+
+h1.promo-header {
+    margin-top: 0px;
+}
+
+h1.promo-header {
+    font-family: "Rubik Medium";
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+/*Стилизация части "промо"*/
+section.promo .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.promo-info {
+    color: white;
+    width: 568px;
+    margin-top: 100px;
+}
+
+/*Тут я не смог понять, как только одну картинку из бэкграунда повернуть, чтобы не пришлось использовать 2 капртинки кавычек... Поэтому таки 2 файла*/
+blockquote {
+    width: 274px;
+    color: #87c4ff;
+    font-family: "PT Sans";
+    font-size: 16px;
+    margin-top: 110px;
+    line-height: 30px;
+    background: 
+        url(../img/quote.svg) no-repeat left top,
+        url(../img/quote_reverse.svg) no-repeat right bottom; 
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.promo-info p {
+    font-family: "PT Sans";
+    font-size: 20px;
+}
+
+/*Стилизация части с каталогом*/
+.catalog-head h2 {
+    font-family: "PT Sans";
+    font-weight: bold;
+    color: #1b4366;
+    margin-top: 70px;
+}
+
+.catalog-nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    margin-bottom: 0;
+    margin-top: 38px;
+}
+
+.catalog-nav {
+    border-bottom: 1px solid #4675ad;
+}
+
+
+.catalog-nav a {
+    font-family: "PT Sans";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.catalog-nav .link-active {
+    color: white;
+}
+
+.catalog-nav ul li:first-child {
+    color: white;
+    background-color: #6ea1e0;
+    background-image: url(../img/fish_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 25px;
+    padding: 25px 50px 23px 71px;
+}
+
+.catalog-nav ul li:nth-child(2) {
+    background-image: url(../img/aquarium_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-left: 71px;
+}
+
+.catalog-nav ul li:nth-child(3) {
+    background-image: url(../img/food_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 21px;
+    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-left: 71px;
+}
+
+.catalog-nav ul li:nth-child(4) {
+    background-image: url(../img/equipment_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 25px;
+    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-left: 71px;
+}
+
+.catalog-nav ul li:nth-child(5) {
+    background-image: url(../img/grunt_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 20px 25px;
+    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-left: 71px;
+}
+
+section.catalog {
+    background-color: white;
+    height: 564px;
+}
+
+.catalog-body .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.catalog-body a {
+    text-decoration: none;
+    color: #1c4366;
+}
+.catalog-body h3 {
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 45px;
+}
+
+.catalog-body p {
+    font-family: "PT Sans";
+    font-size: 14px;
+    margin-top: 0;
+}
