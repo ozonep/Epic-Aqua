@@ -414,6 +414,7 @@ section.popular-items {
 
 .popular-body img {
     border-bottom: 1px solid grey;
+    display: block;
 }
 
 .button .button-blue {
@@ -435,7 +436,6 @@ section.popular-items {
 .popular-items h3 {
     font-family: "PT Sans";
     font-size: 20px;
-    
     margin-top: 20px;
 }
 
@@ -444,4 +444,89 @@ section.popular-items {
     font-size: 16px;
     margin-top: 0px;
     color: #1c4366;
+}
+
+/*Секция "Как сделать заказ" */
+
+section.how-to {
+    border-bottom: 1px solid gray;
+}
+
+.steps-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+}
+
+.how-to .container {
+    height: 430px;
+}
+
+.how-to h2 {
+    font-family: "PT Sans";
+    color: #1c4366;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 36px;
+}
+
+
+.how-to-steps:first-child p::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/step-one.png);
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 29px;
+}
+
+.how-to-steps p {
+    vertical-align: middle;
+    font-family: "PT Sans";
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.how-to-steps a {
+    font-family: "PT Sans";
+    font-size: 16px;
+    padding-left: 55px;
+}
+
+.how-to-steps:nth-child(2) p::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/step-two.png);
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 21px;
+}
+
+.how-to-steps:nth-child(3) p::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/step-three.png);
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 28px;
+}
+
+.how-to-steps:nth-child(2n+1) img {
+    margin-bottom: 18px;
+}
+
+.how-to-steps {
+    flex-basis: 33%;
+}
+
+.how-to-steps img {
+    padding-left: 40px;
 }
