@@ -468,8 +468,9 @@ section.how-to {
     color: #1c4366;
     font-weight: bold;
     font-size: 30px;
-    margin-top: 70px;
+    padding-top: 70px;
     margin-bottom: 36px;
+    margin-top: 0px;
 }
 
 
@@ -529,4 +530,148 @@ section.how-to {
 
 .how-to-steps img {
     padding-left: 40px;
+}
+
+/*Стилизация адресной секции*/
+.map {
+    height: 365px;
+    flex-basis: 45%;
+}
+
+section.address {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.address-container {
+    margin-left: 30px;
+    width: 623px;
+}
+
+.splash-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 35px;
+}
+ 
+.splash-address h3 {
+    margin-top: 0px;
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.splash-address p {
+    margin-top: 0px;
+    font-family: "PT Sans";
+    font-size: 16px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: "PT Sans";
+    font-size: 14px;
+}
+
+.info-one p:nth-child(n)::before {
+    content: "";
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+.info-one p:first-child::before {
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/info-clock.svg);
+    margin-right: 11px;
+}
+
+.info-one p:nth-child(2)::before {
+    width: 36px;
+    height: 31px;
+    background-image: url(../img/info-dostavka.svg);
+    margin-right: 8px;
+}
+
+.info-one p:nth-child(3)::before {
+    width: 31px;
+    height: 31px;
+    background-image: url(../img/info-closed.svg);
+    margin-right: 11px;
+}
+
+.info-two {
+    border-left: 1px solid #ffb400;
+    padding-left: 28px;
+}
+
+.info-one {
+    padding-right: 10px;
+    flex-basis: 42%;
+}
+
+.info-two p:nth-child(n+2)::before {
+    content: "";
+    display: inline-block;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+.info-two p:nth-child(2)::before {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/info-phone.svg);
+    margin-right: 9px;
+}
+
+.info-two p:nth-child(3)::before {
+    width: 30px;
+    height: 22px;
+    background-image: url(../img/info-mail.svg);
+    margin-right: 9px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 230px;
+}
+
+footer {
+    background-color: #1c4366;
+}
+
+.social a {
+    display: block;
+    color: #fea91b;
+    font-family: "PT Sans";
+    font-weight: 14px;
+}
+
+footer h3 {
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffb400;
+}
+
+footer table a {
+    font-family: "PT Sans";
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding-right: 185px;
+}
+
+td {
+    height: 25px;
+}
+
+footer img {
+    margin-top: 25px;
+    margin-right: 15px;
 }

@@ -152,50 +152,110 @@
             </div>
         </section>
         <section class="address">
-            <div class="container">
-                <div class="splash-address">
-                    <h3>Салон аквадизайна Splash</h3>
-                    <p>Санкт-Петербург, набережная реки Фонтанки 99</p>
-                </div>
-                <div class="info-one">
-                    <p>Время работы магазина: <br>с 10.00 до 18.00</p>
-                    <p>Доставка курьером: <br>с 9.00 до 22.00</p>
-                    <p>Выходные дни: суббота, воскресенье и <br>праздничные дни </p>
-                </div>
-                <div class="info-two">
-                    <p>Цены, представленные на сайте действительны, только в <br>случае оформления заказа через интернет-магазин</p>
-                    <p>+7 (812) 310-2972</p>
-                    aqualandia@mail.ru
+            <div class="map" id="map"></div>
+            <div class="right-address">
+                <div class="address-container">
+                    <div class="splash-address">
+                        <h3>Салон аквадизайна Splash</h3>
+                        <p>Санкт-Петербург, набережная реки Фонтанки 99</p>
+                    </div>
+                    <div class="info-container">
+                        <div class="info-one">
+                            <p>Время работы магазина: <br>с 10.00 до 18.00</p>
+                            <p>Доставка курьером: <br>с 9.00 до 22.00</p>
+                            <p>Выходные дни: <br>суббота, воскресенье и <br>праздничные дни </p>
+                        </div>
+                        <div class="info-two">
+                            <p>Цены, представленные на сайте действительны, <br>только в случае оформления заказа через интернет-магазин</p>
+                            <p>+7 (812) 310-2972</p>
+                            <p>aqualandia@mail.ru</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="conainer">
+        <div class="container">
             <img src="img/logo.png" alt="logo" class="logo">
             <nav class="footer-nav">
             <h3>Каталог</h3>
             <table>
                 <tr>
-                    <td>Рыбы</td>
-                    <td>Оборудование</td>
+                    <td><a href="#">Рыбы</a></td>
+                    <td><a href="#">Оборудование</a></td>
                 </tr>
                 <tr>
-                    <td>Аквариумы</td>
-                    <td>Грунты и наполнители</td>
+                    <td><a href="#">Аквариумы</a></td>
+                    <td><a href="#">Грунты и наполнители</a></td>
                 </tr>
                 <tr>
-                    <td>Корма</td>
+                    <td><a href="#">Корма</a></td>
                 </tr>
             </table>
             </nav>
             <div class="social">    
                 <a href="">Заказать обратный звонок</a>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="img/social-odnoklassniki.svg" alt="">
+                <img src="img/social-twitter.svg" alt="">
+                <img src="img/social-vk.svg" alt="">
             </div>
         </div>
     </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq4HQGZP-R7bmSQBer6i5g0hOcf5_KF6s&signed_in=true&callback=initMap"></script>
+    <script>
+var mapPoints = [
+  [
+    'набережная реки Фонтанки, 99', 
+    59.923717, 
+    30.321680, 
+    '<div class="some-class"><h2>Салон аквадизайна Splash</h2><p>Рыбки и оборудование для аквариумистики в Санкт-Петербурге</p></div>'
+  ],
+];
+var mapStyle = [{ }];
+var mapInfoWindow = null;
+function initMap() {
+  var mapDiv = document.getElementById('map');
+  var center = {lat: 59.923717, lng: 30.321680};
+  var map = new google.maps.Map(mapDiv, {
+    zoom: 15,
+    center: center,
+    disableDefaultUI: true,
+    styles: mapStyle
+  });
+  setMapMarkers(map);
+  mapInfoWindow = new google.maps.InfoWindow({
+    content: "loading...",
+    maxWidth: 200
+  });
+  map.addListener('resize', function() {
+    map.panTo(center); 
+  });
+  google.maps.event.addDomListener(window, 'resize', function(){
+    google.maps.event.trigger(map, 'resize'); 
+  });
+}
+function setMapMarkers(map) {
+  var image = {
+    url: 'img/metka.svg',
+    size: new google.maps.Size(20, 20),
+    anchor: new google.maps.Point(10, 20)
+  };
+  for (var i = 0; i < mapPoints.length; i++) {
+    var point = mapPoints[i];
+    var marker = new google.maps.Marker({
+      position: {lat: point[1], lng: point[2]},
+      map: map,
+      icon: image,
+      title: point[0],
+      html: point[3],
+    });
+    google.maps.event.addListener(marker, 'click', function () {
+      mapInfoWindow.setContent(this.html);
+      mapInfoWindow.open(map, this);
+    });
+  }
+}
+</script>
 </body>
 </html>
