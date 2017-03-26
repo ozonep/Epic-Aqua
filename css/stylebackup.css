@@ -1,0 +1,72 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+}
+
+header img {
+    margin-top: 14px;
+}
+
+.main-nav ul {
+    padding-left: 0px;
+}
+
+.main-nav li {
+    display: inline-block;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.main-nav li a, .bin-empty {
+    text-decoration: none;
+    color: white;
+}
+
+.bin-empty {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 260px;
+}
+
+a.call {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: end;
+}
+
+.main-nav ul li:first-child {
+    padding-left: 8px;
+}
+
+.main-nav ul li:nth-child(2) {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.main-nav {
+    display: inline-block;
+    margin-left: 127px;
+    border-bottom: 2px solid #f7a000;
+}
+
+section.promo {
+    background-image: url(img/background_fish.jpg);
+    background-color: blue;
+}
+
+.catalog-nav li {
+    display: inline-block;
+}
+
