@@ -30,31 +30,31 @@
             <h2>Форма заказа</h2>
         <form action="">
             <div class="form-group">
-                <div class="input-header">
+                <div class="input-header left-input">
                     <p>Наименование</p>
                     <p>Количество</p>
                 </div>
-                <div class="input-container">
+                <div class="input-container left-input">
                     <label>
                         <span>1. Аквариум 2567 Панорамный</span>
-                        <input type="number" min="0" max="9" placeholder="1">
+                        <input type="number" min="0" max="9" placeholder="1" class="number-input" name="qty-aqua">
                     </label>
                 </div>
-                <div class="input-container">
+                <div class="input-container left-input">
                     <label>
                         <span>2. Сом пресноводный</span>
-                        <input type="number" min="0" max="9" placeholder="5">
+                        <input type="number" min="0" max="9" placeholder="5" class="number-input" name="qty-som">
                     </label>
                 </div>
-                <div class="input-container">
+                <div class="input-container left-input">
                     <label>
                         <span>3. Золотая рыбка обычная</span>
-                        <input type="number" min="0" max="9" placeholder="3">
+                        <input type="number" min="0" max="9" placeholder="3" class="number-input" name="qty-golden">
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <div class="input-container">
+                <div class="input-container center-input top">
                     <label>
                         <span>Способ доставки</span>
                         <select name="delivery-method" id="">
@@ -63,7 +63,7 @@
                         </select>
                     </label>
                 </div>
-                <div class="input-container">
+                <div class="input-container center-input">
                     <label>
                         <span>Способ оплаты</span>
                         <select name="pay-method" id="">
@@ -75,19 +75,25 @@
                 </div>
             </div>
             <div class="form-group">
+                <div class="input-container right-input top">
                 <label>
                     <span>Имя</span>
-                    <input type="text">
+                    <input type="text" class="fio" name="name">
                 </label>
+                </div>
+                <div class="input-container right-input">
                 <label>
                     <span>Фамилия</span>
-                    <input type="text">
+                    <input type="text" class="fio" name="surname">
                 </label>
+                </div>
+                <div class="input-container right-input">
                 <label>
                     <span>Телефон</span>
-                    <input type="text">
+                    <input type="text" class="fio" name="phone">
                 </label>
-                <input type="submit" value="оформить заказ" class="submit-button">
+                </div>
+                <input type="submit" value="оформить заказ" class="submit-button" name="button">
             </div>
         </form>
         </div>

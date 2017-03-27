@@ -127,16 +127,59 @@ main {
 
 .form-group:first-child {
     border-right: 1px solid grey;
+    flex-basis: 40%;
+}
+
+.form-group:nth-child(2) {
+    flex-basis: 28%;
 }
 
 .form-group:nth-child(3) {
     border-left: 1px solid grey;
+    flex-basis: 32%;
+}
+
+.left-input {
+    padding-left: 90px;
+    padding-right: 28px;
+}
+
+.center-input {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.right-input {
+    padding-left: 25px;
+    padding-right: 94px;
 }
 
 label, .input-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.input-header p {
+    font-family: "PT Sans";
+    font-size: 14px;
+    color: #7b7b7b;
+}
+
+.left-input span {
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.center-input span {
+    font-family: "PT Sans";
+    font-size: 16px;
+}
+
+.right-input span {
+    font-family: "PT Sans";
+    font-size: 16px;
 }
 
 .form-absolute-container {
@@ -149,6 +192,46 @@ label, .input-header {
     margin-top: 0px;
     margin-left: 90px;
     color: white;
+}
+
+.center-input.top {
+    margin-top: 44px;
+}
+
+.right-input.top {
+    margin-top: 44px;
+}
+
+.fio {
+    width: 165px;
+    height: 30px;
+}
+
+select {
+    width: 127px;
+    text-align: center;
+    font-family: "PT Sans";
+    font-size: 14px;
+    color: #949494;
+    padding-left: 15px;
+    height: 30px;
+}
+
+.number-input {
+    font-family: "PT Sans";
+    font-size: 14px;
+    width: 50px;
+    padding-left: 15px;
+    height: 30px;
+}
+
+.submit-button {
+    background-color: #226298;
+    color: white;
+    width: 168px;
+    height: 46px;
+    margin-top: 50px;
+    margin-left: 110px;
 }
 
 /*СТИЛИЗАЦИЯ ФУТЕРА*/
